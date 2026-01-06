@@ -1,0 +1,265 @@
+[
+    {
+
+    "toyId": 1,
+
+    "toyName": "Lego Classic Bricks",
+
+    "sellerName": "Toys R Us Local",
+
+    "sellerEmail": "contact@toysruslocal.com",
+
+    "price": 49.99,
+
+    "rating": 4.7,
+
+    "availableQuantity": 75,
+
+    "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving. Kids can build anything they imagine, from houses to vehicles.",
+
+    "pictureURL": "https://cdn.pixabay.com/photo/2016/03/31/20/11/lego-1297582_1280.png",
+
+    "subCategory": "Building Blocks"
+
+  },
+  {
+    "toyId": 2,
+    "toyName": "Sky-High RC Quadcopter",
+    "sellerName": "Aero Gadgets",
+    "sellerEmail": "support@aerogadgets.com",
+    "price": 89.99,
+    "rating": 4.8,
+    "availableQuantity": 30,
+    "description": "Take to the skies with this high-performance drone.\nFeatures a 4K camera for stunning aerial photography.\nStable flight control makes it perfect for beginners.\nIncludes spare propellers and a sturdy carrying case.\nRechargeable battery provides 25 minutes of flight.\nAdvanced GPS return-to-home safety features included.\nConnects to your smartphone via a dedicated app.\nDurable frame protects against minor accidental crashes.\nBright LED lights allow for safe nighttime operation.\nThe ultimate gift for aspiring pilots and hobbyists.",
+    "pictureURL": "https://i.ibb.co.com/dwH6MdRT/1-STEMUPDATED3.png",
+    "subCategory": "Remote Control"
+  },
+  {
+    "toyId": 3,
+    "toyName": "Galactic Warrior Action Figure",
+    "sellerName": "Galaxy Toys",
+    "sellerEmail": "sales@galaxytoys.net",
+    "price": 24.50,
+    "rating": 4.5,
+    "availableQuantity": 120,
+    "description": "Bring the battle for the universe to your room.\nThis 12-inch figure features 20 points of articulation.\nComes with a glowing laser sword and shield.\nHand-painted details capture every bit of armor.\nPerfect for collectors and children ages 6 and up.\nMade from high-quality, non-toxic plastic materials.\nPart of the limited edition Stellar Defenders series.\nInterchangeable hands allow for various battle poses.\nStands firmly on any flat surface for easy display.\nIgnite your child's imagination with epic space tales.",
+    "pictureURL": "https://i.ibb.co.com/cKXf4Xbw/81f-KTx-X5mm-L-AC-UF894-1000-QL80.jpg",
+    "subCategory": "Action Figures"
+  },
+  {
+    "toyId": 4,
+    "toyName": "Ultimate Chemistry Lab Kit",
+    "sellerName": "Science Kids",
+    "sellerEmail": "info@sciencekids.org",
+    "price": 55.00,
+    "rating": 4.9,
+    "availableQuantity": 45,
+    "description": "Unlock the wonders of science with this massive kit.\nPerform over 50 safe and exciting experiments at home.\nIncludes real glass test tubes and protective goggles.\nLearn about polymers, acids, bases, and reactions.\nComes with a detailed, full-color instruction manual.\nPerfect for STEM learning and school science projects.\nRequires adult supervision for certain chemical steps.\nAll ingredients are clearly labeled and securely sealed.\nIncludes a portable storage case for easy cleanup.\nEncourages critical thinking and scientific discovery.",
+    "pictureURL": "https://i.ibb.co.com/mVkDfCJ9/coding-stem-toys-games.webp",
+    "subCategory": "Educational Toys"
+  },
+  {
+    "toyId": 5,
+    "toyName": "Plush Cuddle Bear",
+    "sellerName": "Soft Hugs Co.",
+    "sellerEmail": "hello@softhugs.com",
+    "price": 19.99,
+    "rating": 4.6,
+    "availableQuantity": 200,
+    "description": "Meet your new best friend for bedtime stories.\nThis bear is made from ultra-soft premium plush fabric.\nFeatures embroidered eyes for safety and durability.\nStands 18 inches tall and is perfectly huggable.\nAvailable in classic chocolate brown or creamy white.\nMachine washable on a gentle cycle for easy cleaning.\nFilled with eco-friendly recycled polyester stuffing.\nIdeal for toddlers, kids, and even stressed adults.\nComes with a removable red satin bow around its neck.\nA timeless gift for birthdays or holiday celebrations.",
+    "pictureURL": "https://i.ibb.co.com/PGrn9VYj/e06-KIBO.png",
+    "subCategory": "Plushies"
+  },
+  {
+    "toyId": 6,
+    "toyName": "Speedway Racing Track",
+    "sellerName": "Turbo Wheels",
+    "sellerEmail": "contact@turbowheels.com",
+    "price": 65.00,
+    "rating": 4.7,
+    "availableQuantity": 60,
+    "description": "Experience high-speed thrills on this massive track.\nFeatures a dual-lane loop for competitive racing fun.\nIncludes two die-cast metal racing cars in the box.\nEasy-to-assemble pieces click together in minutes.\nTrack length extends to over 15 feet when straight.\nManual launcher provides a powerful boost to cars.\nCompact design allows for easy storage under a bed.\nCompatible with most 1:64 scale die-cast toy cars.\nGravity-defying stunts will keep kids entertained.\nPerfect for developing motor skills and coordination.",
+    "pictureURL": "https://i.ibb.co.com/vvXmVpjC/000-best-off-road-vehicles-motortrend-ryan-lugo-design.webp",
+    "subCategory": "Vehicles"
+  },
+  {
+    "toyId": 7,
+    "toyName": "Wooden Master Chess Set",
+    "sellerName": "Classic Games Hub",
+    "sellerEmail": "orders@classicgames.com",
+    "price": 34.99,
+    "rating": 4.8,
+    "availableQuantity": 85,
+    "description": "A beautifully crafted set for future grandmasters.\nBoard is made from solid walnut and maple wood.\nEach chess piece is hand-carved with felt bottoms.\nThe board folds in half to store the pieces inside.\nSecured with a brass latch to prevent loss of items.\nPerfect for teaching strategy and patience to kids.\nIncludes a basic guide on how to play the game.\nElegant design looks great on any coffee table.\nStandard tournament size for a professional feel.\nA gift that will last for many generations to come.",
+    "pictureURL": "https://i.ibb.co.com/chBRFNFw/media-zenfs.webp",
+    "subCategory": "Board Games"
+  },
+  {
+    "toyId": 8,
+    "toyName": "Rainbow Art Easel",
+    "sellerName": "Creative Kids",
+    "sellerEmail": "art@creativekids.com",
+    "price": 42.50,
+    "rating": 4.4,
+    "availableQuantity": 40,
+    "description": "Unleash your inner artist with this 3-in-1 easel.\nFeatures a chalkboard, whiteboard, and paper roll.\nHeight is adjustable to grow with your child's age.\nIncludes a large tray to hold paints and brushes.\nMade from sturdy, sustainably sourced pinewood.\nFolds flat for convenient storage when not in use.\nEncourages fine motor skills and creative expression.\nComes with a starter set of chalk and erasers.\nIdeal for toddlers and elementary school children.\nTransform your playroom into a professional art studio.",
+    "pictureURL": "https://i.ibb.co.com/kscSLz2r/budget-art.png",
+    "subCategory": "Art & Crafts"
+  },
+  {
+    "toyId": 9,
+    "toyName": "Magical Mermaid Doll",
+    "sellerName": "Ocean Wonders",
+    "sellerEmail": "support@oceanwonders.com",
+    "price": 15.99,
+    "rating": 4.3,
+    "availableQuantity": 150,
+    "description": "Dive into an underwater world of pure fantasy.\nThis doll features a color-changing tail in water.\nComes with a sparkling tiara and seashell comb.\nLong, vibrant hair is perfect for styling and braids.\nPoseable arms allow for realistic swimming motions.\nSafe for use in the bathtub or swimming pools.\nMade from waterproof and durable high-grade plastic.\nCollect all three colors in the Deep Sea series.\nSparkly fin glitters beautifully under the sunlight.\nA wonderful companion for imaginative water play.",
+    "pictureURL": "https://i.ibb.co.com/x8q6BbC5/cute-baby-dolls-children-still-life-23-2150872407.avif",
+    "subCategory": "Dolls"
+  },
+  {
+    "toyId": 10,
+    "toyName": "Robot Coding Bot",
+    "sellerName": "Tech Genies",
+    "sellerEmail": "service@techgenies.com",
+    "price": 110.00,
+    "rating": 4.9,
+    "availableQuantity": 25,
+    "description": "Introduce your child to the world of programming.\nThis robot can be coded using simple drag-and-drop.\nNo computer required; use the buttons on its head.\nFollows lines, avoids obstacles, and dances to music.\nCompatible with a free app for advanced coding tasks.\nTeaches logic, sequencing, and problem-solving skills.\nComes with activity cards and a 50-page guide book.\nRechargeable via USB for hours of educational fun.\nSturdy design can withstand drops from low heights.\nThe perfect entry point for future software engineers.",
+    "pictureURL": "https://i.ibb.co.com/dwH6MdRT/1-STEMUPDATED3.png",
+    "subCategory": "STEM"
+  },
+  {
+    "toyId": 11,
+    "toyName": "Junior Acoustic Guitar",
+    "sellerName": "Music Makers",
+    "sellerEmail": "info@musicmakers.com",
+    "price": 79.00,
+    "rating": 4.6,
+    "availableQuantity": 35,
+    "description": "The perfect first instrument for young musicians.\n3/4 scale size is ideal for small hands to hold.\nProduces a rich, warm sound similar to full guitars.\nFeatures nylon strings which are gentle on fingers.\nIncludes a gig bag, tuner, and a set of picks.\nCrafted from high-quality linden wood for durability.\nAvailable in natural wood finish or bright blue.\nComes with an introductory book of easy chords.\nHelps develop rhythm and hand-eye coordination.\nStart your child's musical journey on a high note.",
+    "pictureURL": "https://i.ibb.co.com/r2P3X5RC/istockphoto-1097258406-612x612.jpg",
+    "subCategory": "Musical Instruments"
+  },
+  {
+    "toyId": 12,
+    "toyName": "Dino Discovery Dig Kit",
+    "sellerName": "Prehistoric Finds",
+    "sellerEmail": "dig@prehistoricfinds.com",
+    "price": 22.99,
+    "rating": 4.7,
+    "availableQuantity": 90,
+    "description": "Become a real paleontologist in your own backyard.\nDig through the plaster brick to find hidden bones.\nIncludes a brush, chisel, and magnifying glass tool.\nAssemble the bones to build a T-Rex skeleton model.\nSkeleton glows in the dark once fully assembled.\nLearn fascinating facts about the Jurassic period.\nProvides hours of hands-on, engaging entertainment.\nSafety tested and non-toxic materials for peace of mind.\nPerfect for dinosaur lovers and curious young minds.\nA great activity for rainy days or birthday parties.",
+    "pictureURL": "https://i.ibb.co.com/mVkDfCJ9/coding-stem-toys-games.webp",
+    "subCategory": "Educational Toys"
+  },
+  {
+    "toyId": 13,
+    "toyName": "Super Stunt Kitchen Set",
+    "sellerName": "Little Chefs",
+    "sellerEmail": "cook@littlechefs.net",
+    "price": 59.99,
+    "rating": 4.5,
+    "availableQuantity": 50,
+    "description": "Cook up a feast with this realistic play kitchen.\nFeatures lights and sounds on the stove burners.\nIncludes a 20-piece accessory set with pots and pans.\nDoors on the oven and microwave really open and close.\nMade from durable plastic that is easy to wipe clean.\nEncourages social play and creative role-playing.\nSmall footprint fits perfectly in a playroom corner.\nBatteries are included so play can start immediately.\nHelps children learn about kitchen safety and food.\nThe dream gift for any aspiring young master chef.",
+    "pictureURL": "https://i.ibb.co.com/zWKBG0Qm/oven-and-hob-eb79f107-a606-4563-890f-56546923496e.webp",
+    "subCategory": "Role Play"
+  },
+  {
+    "toyId": 14,
+    "toyName": "Extreme Off-Road RC Truck",
+    "sellerName": "Trail Blazers",
+    "sellerEmail": "sales@trailblazers.com",
+    "price": 125.00,
+    "rating": 4.9,
+    "availableQuantity": 15,
+    "description": "Conquer any terrain with this heavy-duty RC truck.\nFeatures 4-wheel drive and oversized rubber tires.\nReaches speeds of up to 25 miles per hour easily.\nEquipped with a long-range 2.4GHz remote control.\nShock absorbers handle jumps and bumpy dirt paths.\nRechargeable battery pack and charger are included.\nWater-resistant electronics for driving through puddles.\nBright headlights allow for evening racing sessions.\nPowerful motor provides incredible climbing torque.\nBuilt for speed, durability, and outdoor adventures.",
+    "pictureURL": "https://i.ibb.co.com/VWT0xGPz/rc-toys-0016-65450a55052eb.avif",
+    "subCategory": "Remote Control"
+  },
+  {
+    "toyId": 15,
+    "toyName": "Outer Space Puzzle",
+    "sellerName": "Puzzle Pieces",
+    "sellerEmail": "help@puzzlepieces.com",
+    "price": 14.99,
+    "rating": 4.4,
+    "availableQuantity": 300,
+    "description": "Explore the solar system piece by piece today.\n1000 pieces of high-quality, recycled cardboard.\nFeatures a vibrant image of planets and galaxies.\nLinen finish reduces glare for a better experience.\nIncludes a full-size poster for reference while building.\nFinished puzzle measures 27 by 19 inches in size.\nGreat for family bonding time and mental exercise.\nEach piece is unique and fits together perfectly.\nChallenging enough for adults but fun for teens.\nA beautiful way to decorate after being glued.",
+    "pictureURL": "https://i.ibb.co.com/xthYn8R3/cubetto5.jpg",
+    "subCategory": "Puzzles"
+  },
+  {
+    "toyId": 16,
+    "toyName": "Magical Wand Kit",
+    "sellerName": "Wizard's Corner",
+    "sellerEmail": "magic@wizardscorner.com",
+    "price": 29.50,
+    "rating": 4.2,
+    "availableQuantity": 110,
+    "description": "Craft your very own light-up wizard wand today.\nIncludes three different handles and core pieces.\nLED lights change color with a flick of the wrist.\nComes with a book of 15 beginner magic tricks.\nRequires 2 AAA batteries which are sold separately.\nHigh-quality resin feels like real enchanted wood.\nPerfect for Halloween costumes or daily dress-up.\nPackaged in a beautiful, velvet-lined display box.\nEncourages imagination and performance confidence.\nA must-have for fans of fantasy and sorcery tales.",
+    "pictureURL": "https://i.ibb.co.com/xt1TVDt9/istockphoto-1383965719-612x612.jpg",
+    "subCategory": "Role Play"
+  },
+  {
+    "toyId": 17,
+    "toyName": "Baby’s First Building Blocks",
+    "sellerName": "Soft Steps",
+    "sellerEmail": "care@softsteps.com",
+    "price": 12.99,
+    "rating": 4.8,
+    "availableQuantity": 500,
+    "description": "Safe and soft blocks for the littlest builders.\nSet of 10 squeakable, chewable silicone blocks.\nEach side features numbers, animals, and shapes.\nHelps develop sensory awareness and motor skills.\nBPA-free and non-toxic for safe teething time.\nBright colors engage a baby's developing vision.\nEasy to grasp for tiny hands to stack high.\nCan be used in the bath for floating water fun.\nComes with a reusable bag for easy organization.\nA thoughtful and practical gift for new parents.",
+    "pictureURL": "https://i.ibb.co.com/PHm3Cnp/Baby-Toddler-Shopify-Page-Assets-Updated-Baby-Toddler-Image-Content-2-Grocery-Cart.webp",
+    "subCategory": "Toddler Toys"
+  },
+  {
+    "toyId": 18,
+    "toyName": "Eco-Friendly Sand Set",
+    "sellerName": "Beach Fun",
+    "sellerEmail": "beach@funtoys.com",
+    "price": 18.00,
+    "rating": 4.6,
+    "availableQuantity": 140,
+    "description": "Construct giant sandcastles with this durable set.\nMade from 100% recycled ocean-bound plastics.\nIncludes a bucket, shovel, rake, and four molds.\nMolds feature sea creature shapes like crabs and fish.\nSturdy handles are designed for heavy wet sand.\nEasy to rinse clean and resistant to salt water.\nBright, fade-resistant colors for sunny beach days.\nCompact set fits easily into a travel backpack.\nPromotes outdoor play and creative construction.\nA sustainable choice for environmentally conscious families.",
+    "pictureURL": "https://i.ibb.co.com/LDHpSXLQ/istockphoto-473313240-612x612.jpg",
+    "subCategory": "Outdoor Play"
+  },
+  {
+    "toyId": 19,
+    "toyName": "Deluxe Marble Run",
+    "sellerName": "Gravity Games",
+    "sellerEmail": "info@gravitygames.com",
+    "price": 39.99,
+    "rating": 4.7,
+    "availableQuantity": 55,
+    "description": "Design infinite tracks for racing glass marbles.\nIncludes 100 translucent pieces and 20 marbles.\nFeatures windmills, funnels, and steep drop-offs.\nSnap-together parts are easy for children to use.\nTeaches basic physics and architectural concepts.\nTall towers remain stable on hard floor surfaces.\nSee-through tubes let you track the marble's path.\nEncourages cooperative play between siblings.\nProvides hours of mesmerizing and creative fun.\nA classic toy that never goes out of style.",
+    "pictureURL": "https://i.ibb.co.com/fdxXm1Gx/vastate-satsun-aexoniz-toys-non-toxic-train-building-blocks-game-toys-building-blocks-toy-set-60-pcs.webp",
+    "subCategory": "Building Blocks"
+  },
+  {
+    "toyId": 20,
+    "toyName": "Portable Table Tennis",
+    "sellerName": "Active Kids",
+    "sellerEmail": "sports@activekids.net",
+    "price": 27.50,
+    "rating": 4.5,
+    "availableQuantity": 70,
+    "description": "Turn any table into a professional ping pong arena.\nRetractable net stretches up to 6 feet wide.\nIncludes two wooden paddles and three balls.\nRubber grips on paddles provide excellent control.\nComes with a mesh bag for travel and storage.\nIdeal for indoor exercise and family game nights.\nAttaches to tables up to 2 inches in thickness.\nSetup takes less than one minute to complete.\nGreat for improving reflexes and hand-eye speed.\nA fun way to stay active during rainy days.",
+    "pictureURL": "https://i.ibb.co.com/7mZhc3z/kids-playing-soccer-scaled.jpg",
+    "subCategory": "Sports"
+  },
+  {
+    "toyId": 21,
+    "toyName": "Glow-in-the-Dark Slime Kit",
+    "sellerName": "Gooey Fun",
+    "sellerEmail": "sticky@gooeyfun.com",
+    "price": 14.50,
+    "rating": 4.3,
+    "availableQuantity": 180,
+    "description": "Make your own glowing, squishy slime at home.\nIncludes neon powders and sparkling glitter mix.\nSafe, washable, and non-toxic glue formula used.\nComes with storage jars to keep slime fresh.\nStep-by-step guide ensures perfect slime every time.\nLearn about non-Newtonian fluids while you play.\nGreat for sensory play and stress relief activities.\nDoes not leave stains on clothes or carpets.\nPerfect for parties, sleepovers, or science fans.\nHours of messy, stretchy, and luminous entertainment.",
+    "pictureURL": "https://i.ibb.co.com/kscSLz2r/budget-art.png",
+    "subCategory": "Art & Crafts"
+  }
+]
