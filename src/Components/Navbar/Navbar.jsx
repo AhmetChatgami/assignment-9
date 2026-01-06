@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100 shadow-sm px-4">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -31,7 +31,7 @@ const Navbar = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/toys">Toy Gallery</Link>
+              <Link to="/toysgallery">Toy Gallery</Link>
             </li>
             <li>
               <Link to="/login">Login</Link>
@@ -44,7 +44,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Link to="/">ToyTopia</Link>
+        <Link className="text-2xl font-bold" to="/">ToyTopia</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -52,7 +52,7 @@ const Navbar = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/toys">Toy Gallery</Link>
+            <Link to="/toysgallery">Toy Gallery</Link>
           </li>
           <li>
             <Link to="/login">Login</Link>

@@ -2,9 +2,11 @@ import React from "react";
 
 import { Link, useLoaderData } from "react-router";
 import ToysCard from "../Components/ToysCard/ToysCard";
+import useToys from "../Hooks/useToys";
 
 const Home = () => {
-  const toys = useLoaderData();
+  const { toys, loading, error } = useToys();
+  // const toys = useLoaderData();
   const featuredToys= toys.slice(0, 6)
   console.log()
   return (
