@@ -24,7 +24,9 @@ const useToys = () => {
     };
     fetchToysData();
   }, []);
-
+console.log("toys", toys)
+console.log("loading", loading)
+console.log("error", error)
   return { toys, loading, error };
 };
 

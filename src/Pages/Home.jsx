@@ -13,7 +13,7 @@ const Home = () => {
     <div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {featuredToys.map((toy) => (
-          <ToysCard key={toy.id} toy={toy}/>
+          <ToysCard key={toy.toyId} toy={toy}/>
         ))}
 
       </div>
