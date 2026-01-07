@@ -14,7 +14,7 @@ const ToySlider = ({ toys = [] }) => {
   return (
     <div className="my-10 px-4">
       <h2 className="text-center text-2xl font-bold mb-6">
-        Top Toys
+        Our Demanding Toys
       </h2>
 
       <Swiper

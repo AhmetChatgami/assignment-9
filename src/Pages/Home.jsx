@@ -19,11 +19,11 @@ const Home = () => {
   return (
     <div>
       {/* Hero Sect */}
-      <div className="text-center my-10">
+      <div className="text-center my-10 pb-5 border-b-2 border-amber-200">
         <h1 className="text-3xl font-semibold">
           Where{" "}
           <span className="text-amber-600 font-medium ">
-            Play, Learning & Imagination
+            Play, Learning <span className="text-black"> &</span> Imagination
           </span>{" "}
           Come Together
         </h1>
@@ -40,6 +40,10 @@ const Home = () => {
       
        <ToySlider toys={topToys} />
 
+
+      <div className="text-2xl text-center">
+        <h2 className="font-medium py-8"> Our Popular Toys</h2>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {featuredToys.map((toy) => (
           <ToysCard key={toy.toyId} toy={toy} />
