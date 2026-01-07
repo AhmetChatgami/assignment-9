@@ -5,6 +5,7 @@ import { auth } from "../Firebase/firebase";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Swal from "sweetalert2";
+import { FaEyeSlash, FaRegEye } from "react-icons/fa";
 
 const Register = () => {
   const [success, setSuccess] = useState(false);
@@ -95,7 +96,7 @@ const Register = () => {
                     className="input"
                     placeholder="Password"
                   />
-                  <button onClick= {handleTogglePass} className="btn btn-xs absolute top-7 right-5">Eye</button>
+                  <button onClick= {handleTogglePass} className=" btn-xs absolute top-8 right-7">{showPass? <FaEyeSlash/>: <FaRegEye />}</button>
                   </div>
                   <div>
                     <p>
