@@ -16,7 +16,8 @@ const ToysCard = ({ toy }) => {
     toy;
   return (
     <div>
-      <div className="card bg-base-100 w-96 shadow-sm">
+      <div className="card bg-base-100 w-96 hover:shadow-amber-500 transition-all duration-300 shadow-md hover:shadow-lg">
+
         <figure className="h-48 overflow-hidden">
           <img src={pictureURL} />
         </figure>
@@ -27,7 +28,8 @@ const ToysCard = ({ toy }) => {
           <p> Rating: {rating}</p>
           <p> Available: {availableQuantity}</p>
           <div className="card-actions justify-end">
-            <Link to={`/details/${toyId}`} className="btn btn-primary">See Details</Link>
+            <Link to={`/details/${toyId}`} className="btn bg-gradient-to-r from-amber-400 to-amber-600 hover:from-purple-600 hover:to-pink-600
+         transition-all duration-400 shadow-md hover:shadow-lg">See Details</Link>
           </div>
         </div>
       </div>

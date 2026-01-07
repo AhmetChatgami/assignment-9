@@ -1,6 +1,6 @@
 import React from "react";
 import useToys from "../Hooks/useToys";
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 
 const ToysDetails = () => {
   const { toys, loading } = useToys();
@@ -35,7 +35,7 @@ const ToysDetails = () => {
           </figure>
           <div className="card-body">
             <h2 className="card-title">{toyName}</h2>
-            <p>{sellerName}</p>
+            <p>Selling by: <span className="bg-red-400 font-medium p-1 rounded-xl">{sellerName}</span></p>
             <p>Toy Category: {subCategory}</p>
             <p>Price: ${price}</p>
             <p>
@@ -53,7 +53,11 @@ const ToysDetails = () => {
      <div className="py-10">
         <h2 className=" text-2xl font-semibold">Description:</h2>
          <p className="text-gray-500 pt-4">{description}</p>
+
      </div>
+         <Link className="btn btn-outline" to="/toysgallery">
+            Back to Gallery
+          </Link>
     </div>
   );
 };

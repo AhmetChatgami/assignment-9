@@ -11,7 +11,16 @@ const Home = () => {
   console.log()
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="text-center my-10">
+          <h1 className="text-3xl font-semibold">Where <span className="text-amber-600 font-medium ">Play, Learning & Imagination</span> Come Together</h1>
+
+          <p className="pt-4 text-gray-500 text-xl">
+            Discover a world of carefully selected toys — <br />from creative building blocks to exciting STEM adventures — all in one happy place.
+          </p>
+            <p className="text-xl mt-4 ">Discover • Play • Imagine</p>
+        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 hover:shadow">
+
         {featuredToys.map((toy) => (
           <ToysCard key={toy.toyId} toy={toy}/>
         ))}
@@ -19,7 +28,7 @@ const Home = () => {
       </div>
       <div className="py-8">
 
-        <Link className="btn btn-outline" to="/toysgallery">See More</Link>
+        <Link className="btn btn-outline" to="/toysgallery">Explore More</Link>
       </div>
     </div>
   );
