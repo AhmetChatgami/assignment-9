@@ -1,22 +1,36 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router";
+import { auth } from "../Firebase/firebase";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
-    const handleRegister = (e)=>{
-        e.preventDefault();
-        const name= e.target.name.value;
-        const email= e.target.email.value;
-        const password= e.target.password.value;
-        console.log('registration done', email, name, password)
+  const [error, setError] = useState("");
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log("registration done", email, name, password);
 
-        createUserWithEmailAndPassword
-    }
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        console.log("new user:", result.user);
+      })
+      .catch((error) => {
+        console.log(error);
+        setError(error.message);
+        toast.error("Email already used")
+      });
+  };
   return (
     <div>
       <h1 className="text-3xl text-center font-medium">
         Love to see you here!
       </h1>
+      <ToastContainer position="top-center" autoClose={3000} />
+      {/* {error & alert("email already used")} */}
       <div className="hero bg-base-200 min-h-screen">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
@@ -27,13 +41,24 @@ const Register = () => {
               <form onSubmit={handleRegister}>
                 <fieldset className="fieldset">
                   <label className="label">Name</label>
-                  <input type="text" className="input" name="name" placeholder="Name" />
+                  <input
+                    type="text"
+                    className="input"
+                    name="name"
+                    placeholder="Name"
+                  />
 
                   <label className="label">Email</label>
-                  <input type="email" name="email" className="input" placeholder="Email" />
+                  <input
+                    type="email"
+                    name="email"
+                    className="input"
+                    placeholder="Email"
+                  />
                   <label className="label">Password</label>
                   <input
-                    type="password" name="password"
+                    type="password"
+                    name="password"
                     className="input"
                     placeholder="Password"
                   />
