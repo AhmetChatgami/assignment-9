@@ -16,6 +16,22 @@ const Register = () => {
     const password = e.target.password.value;
     console.log("registration done", email, name, password);
 
+
+    const passLength = /^.{6,}$/;
+    const passCase = /^(?=.*[a-z])(?=.*[A-Z]).+$/;
+    if(!passLength.test(password)){
+      console.log('Password dismatch')
+      setError(toast.error("Password must be 6 character"))
+      return;
+    }
+
+    else if(!passCase.test(password)){
+      console.log('Lower & Upper Case needed')
+      setError(toast.error("One Upper Case & Lower Case needed."))
+      return;
+    }
+
+    setError('');
     setSuccess(false);
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
@@ -26,11 +42,12 @@ const Register = () => {
           text: "Acount created successfully!",
           icon: "success",
         });
+        e.target.reset();
       })
       .catch((error) => {
         console.log(error);
-        setError(error.message);
-        toast.error("Email already used");
+        setError(toast.error("Email Already Registered!"));
+        ;
       });
   };
   return (
