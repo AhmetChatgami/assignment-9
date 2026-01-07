@@ -81,13 +81,16 @@ const Register = () => {
                     className="input"
                     placeholder="Email"
                   />
-                  <label className="label">Password</label>
+                  <div>
+                    <label className="label">Password</label>
                   <input
                     type="password"
                     name="password"
                     className="input"
                     placeholder="Password"
                   />
+                  <button className="btn btn-xs">Eye</button>
+                  </div>
                   <div>
                     <p>
                       Have an account?{" "}
