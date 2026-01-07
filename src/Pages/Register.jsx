@@ -96,7 +96,7 @@ const Register = () => {
                     className="input"
                     placeholder="Password"
                   />
-                  <button onClick= {handleTogglePass} className=" btn-xs absolute top-8 right-7">{showPass? <FaEyeSlash/>: <FaRegEye />}</button>
+                  <button onClick= {handleTogglePass} className=" btn-md absolute top-8 right-7">{showPass? <FaEyeSlash/>: <FaRegEye />}</button>
                   </div>
                   <div>
                     <p>
