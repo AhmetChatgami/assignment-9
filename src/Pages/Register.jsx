@@ -4,8 +4,10 @@ import { Link } from "react-router";
 import { auth } from "../Firebase/firebase";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Swal from "sweetalert2";
 
 const Register = () => {
+  const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
   const handleRegister = (e) => {
     e.preventDefault();
@@ -14,14 +16,21 @@ const Register = () => {
     const password = e.target.password.value;
     console.log("registration done", email, name, password);
 
+    setSuccess(false);
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
         console.log("new user:", result.user);
+        setSuccess(true);
+        Swal.fire({
+          title: "Welcome!",
+          text: "Acount created successfully!",
+          icon: "success",
+        });
       })
       .catch((error) => {
         console.log(error);
         setError(error.message);
-        toast.error("Email already used")
+        toast.error("Email already used");
       });
   };
   return (
