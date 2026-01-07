@@ -63,7 +63,7 @@ const Register = () => {
         Love to see you here!
       </h1>
       <ToastContainer position="top-center" autoClose={3000} />
-      {/* {error & alert("email already used")} */}
+      
       <div className="hero bg-base-200 min-h-screen">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">

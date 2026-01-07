@@ -1,15 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import useToys from "../Hooks/useToys";
 import { Link, useParams } from "react-router";
+import Swal from "sweetalert2";
 
 const ToysDetails = () => {
   const { toys, loading } = useToys();
-  console.log(toys);
+
   const { id } = useParams();
-  console.log(id);
+  const [success, setSuccess] = useState(false);
+
   if (loading) {
     return <p>loading...</p>;
   }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSuccess(true);
+    Swal.fire({
+      title: "Wow Great!",
+      text: "We shall back to you soon!",
+      icon: "success",
+    });
+  };
 
   const toy = toys.filter((p) => Number(p.toyId) == id);
   console.log(toy);
@@ -67,25 +79,41 @@ const ToysDetails = () => {
             <div className="text-center">
               <h1 className="text-5xl font-bold">Keep us touch!</h1>
               <p className="py-6">
-               If you Love to checkout, please feel free to fill up this contact field
+                If you Love to checkout, please feel free to fill up this
+                contact field
               </p>
             </div>
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
               <div className="card-body">
-                <fieldset className="fieldset">
-                  <label className="label">Name</label>
-                  <input type="text" className="input" placeholder="Your Full Name" />
-                  <label className="label">Email</label>
-                  <input type="email" className="input" placeholder="Validate Email" />
-                  
-                 
-                  <button className="btn bg-gradient-to-r from-amber-400 to-amber-600 mt-4">Try Now</button>
-                </fieldset>
+                
+                <form onSubmit={handleSubmit}>
+                  {" "}
+                  <fieldset className="fieldset">
+                    <label className="label">Name</label>
+                    <input
+                      type="text"
+                      className="input"
+                      placeholder="Your Full Name"
+                    />
+                    <label className="label">Email</label>
+                    <input
+                      type="email"
+                      className="input"
+                      placeholder="Validate Email"
+                    />
+
+                    <button
+                      type="submit"
+                      className="btn bg-gradient-to-r from-amber-400 to-amber-600 mt-4"
+                    >
+                      Try Now
+                    </button>
+                  </fieldset>
+                </form>
               </div>
             </div>
           </div>
         </div>
-        
       </div>
 
       {/* link back to gallery  */}
