@@ -41,7 +41,7 @@ const Home = () => {
        <ToySlider toys={topToys} />
 
 
-      <div className="text-2xl text-center">
+      <div className="text-2xl text-center border-t-2 border-amber-200 pt-4">
         <h2 className="font-medium py-8"> Our Popular Toys</h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
