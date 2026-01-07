@@ -9,6 +9,7 @@ import Swal from "sweetalert2";
 const Register = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
+  const [showPass, setShowPass]= useState(false);
   const handleRegister = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -49,7 +50,12 @@ const Register = () => {
         setError(toast.error("Email Already Registered!"));
         ;
       });
-  };
+
+    };
+    const handleTogglePass = (event)=>{
+      event.preventDefault();
+      setShowPass(!showPass)
+    }
   return (
     <div>
       <h1 className="text-3xl text-center font-medium">
@@ -81,15 +87,15 @@ const Register = () => {
                     className="input"
                     placeholder="Email"
                   />
-                  <div>
+                  <div className="relative">
                     <label className="label">Password</label>
                   <input
-                    type="password"
+                    type={showPass? 'text': 'password'}
                     name="password"
                     className="input"
                     placeholder="Password"
                   />
-                  <button className="btn btn-xs">Eye</button>
+                  <button onClick= {handleTogglePass} className="btn btn-xs absolute top-7 right-5">Eye</button>
                   </div>
                   <div>
                     <p>
