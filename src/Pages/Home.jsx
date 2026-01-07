@@ -19,7 +19,7 @@ const Home = () => {
           </p>
             <p className="text-xl mt-4 ">Discover • Play • Imagine</p>
         </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 hover:shadow">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
         {featuredToys.map((toy) => (
           <ToysCard key={toy.toyId} toy={toy}/>
