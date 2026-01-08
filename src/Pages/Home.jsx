@@ -27,7 +27,7 @@ const Home = () => {
           </span>{" "}
           Come Together
         </h1>
-    <img src={hero} alt="" />
+    <img className="p-2" src={hero} alt="" />
         <p className="pt-4 text-gray-500 text-xl">
           Discover a world of carefully selected toys — <br />
           from creative building blocks to exciting STEM adventures — all in one
