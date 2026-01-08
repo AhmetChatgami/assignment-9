@@ -4,10 +4,12 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../Firebase/firebase";
 import Swal from "sweetalert2";
 import { toast, ToastContainer } from "react-toastify";
+import { FaEyeSlash, FaRegEye } from "react-icons/fa";
 
 const Login = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
+  const [showPass, setShowPass] = useState(false);
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -15,14 +17,14 @@ const Login = () => {
     console.log(email, password);
 
     const passLength = /^.{6,}$/;
-    const passCase = /^(?=.*[Link-z])(?=.*[A-Z]).+$/;
+    const passCase = /^(?=.*[a-z])(?=.*[A-Z]).+$/;
     if (!passLength.test(password)) {
       console.log("Password dismatch");
-      setError(toast.error("Password must be 6 character"));
+      setError(toast.error("Password must be atleast 6 characters"));
       return;
     } else if (!passCase.test(password)) {
       console.log("Lower & Upper Case needed");
-      setError(toast.error("One Upper Case & Lower Case needed."));
+      setError(toast.error("Password must contain Uppercase & Lowercase letter"));
       return;
     }
     setError("");
@@ -41,6 +43,10 @@ const Login = () => {
         console.log(error.message);
         setError(toast.error("Check Email or Password"));
       });
+  };
+  const handleTogglePass = (event) => {
+    event.preventDefault();
+    setShowPass(!showPass);
   };
   return (
     <div>
@@ -61,17 +67,29 @@ const Login = () => {
                     className="input"
                     placeholder="Email"
                   />
-                  <label className="label">Password</label>
-                  <input
-                    type="password"
-                    name="password"
-                    className="input"
-                    placeholder="Password"
-                  />
-                  <div>
-                    <Link to="/forgetpass" className="link link-hover">Forgot password?</Link>
+                  
+                  {/* password & toggling to show pass */}
+                  <div className="relative">
+                    <label className="label">Password</label>
+                    <input
+                      type={showPass ? "text" : "password"}
+                      name="password"
+                      className="input"
+                      placeholder="Password"
+                    />
+                    <button
+                      onClick={handleTogglePass}
+                      className=" btn-md absolute top-8 right-7"
+                    >
+                      {showPass ? <FaEyeSlash /> : <FaRegEye />}
+                    </button>
                   </div>
-                  <button className="btn btn-neutral mt-4">Login</button>
+                  <div>
+                    <Link to="/forgetpass" className="link link-hover">
+                      Forgot password?
+                    </Link>
+                  </div>
+                  <button className="btn bg-gradient-to-r from-amber-400 to-amber-600 mt-4">Login</button>
                   <div>
                     <p>
                       Dont Have Account?{" "}
