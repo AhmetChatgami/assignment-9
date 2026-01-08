@@ -13,7 +13,7 @@ const Login = () => {
   const [showPass, setShowPass] = useState(false);
 
   // Use Context 
-  const {signInUser}= use(AuthContext);
+  const {signInUser, signInWithGoogle}= use(AuthContext);
 
   const location = useLocation();
   console.log(location)
@@ -63,6 +63,18 @@ const Login = () => {
         setError(toast.error("Check Email or Password"));
       });
   };
+
+const handleGoogleSignIn =()=>{
+  signInWithGoogle()
+  .then (result=>{
+    console.log(result.user)
+    navigate(location?.state || '/')
+  })
+  .catch(error=>{
+    console.log(error)
+  })
+}
+
   const handleTogglePass = (event) => {
     event.preventDefault();
     setShowPass(!showPass);
@@ -109,6 +121,7 @@ const Login = () => {
                     </Link>
                   </div>
                   <button className="btn bg-gradient-to-r from-amber-400 to-amber-600 mt-4">Login</button>
+                  <button onClick={handleGoogleSignIn} className="btn bg-gradient-to-r from-amber-400 to-amber-600 mt-4">Login With Google</button>
                   <div>
                     <p>
                       Dont Have Account?{" "}

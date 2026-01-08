@@ -10,7 +10,7 @@ import {
 } from "firebase/auth";
 import { auth } from "../Firebase/firebase";
 
-const googleProvider  new GoogleAuthProvider();
+const googleProvider=  new GoogleAuthProvider();
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -23,6 +23,7 @@ const AuthProvider = ({ children }) => {
   };
 
   const signInWithGoogle = ()=>{
+    setLoading(true);
     return signInWithPopup(auth, googleProvider)
   }
   const logOut=()=>{
@@ -34,6 +35,7 @@ const AuthProvider = ({ children }) => {
     signInUser,
     logOut,
     loading,
+    signInWithGoogle,
   };
 
   useEffect(() => {
