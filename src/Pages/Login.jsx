@@ -1,19 +1,26 @@
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 import { Link } from "react-router";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../Firebase/firebase";
 import Swal from "sweetalert2";
 import { toast, ToastContainer } from "react-toastify";
 import { FaEyeSlash, FaRegEye } from "react-icons/fa";
+import { AuthContext } from "../AuthContext/AuthContext";
 
 const Login = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
   const [showPass, setShowPass] = useState(false);
+
+  // Use Context 
+  const {signInUser}= use(AuthContext);
+
+
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
+    signInUser(email, password)
     console.log(email, password);
 
     const passLength = /^.{6,}$/;

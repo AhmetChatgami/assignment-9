@@ -1,11 +1,16 @@
 import React, { use } from "react";
 import { Link } from "react-router";
-import Logo from "../../assets/logo.png"
+import Logo from "../../assets/logo.png";
 import { AuthContext } from "../../AuthContext/AuthContext";
 const Navbar = () => {
-
-  const authInfo= use(AuthContext)
-  console.log('navbar is:', authInfo)
+  const { user, logOut } = use(AuthContext);
+  const handleLogOut = () => {
+    logOut().then(() => {
+      console.log("user logout").catch((error) => {
+        console.log(error);
+      });
+    });
+  };
   return (
     <div className="navbar bg-base-100 shadow-sm px-4">
       <div className="navbar-start">
@@ -48,8 +53,10 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        
-        <Link className="text-2xl font-bold flex items-center gap-4" to="/"><img className="h-12 w-13" src={Logo} alt="" /> ToyTopia</Link>
+
+        <Link className="text-2xl font-bold flex items-center gap-4" to="/">
+          <img className="h-12 w-13" src={Logo} alt="" /> ToyTopia
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -96,7 +103,11 @@ const Navbar = () => {
                 <a>Edit</a>
               </li>
               <li>
-                <a>Logout</a>
+                {user ? (
+                  <a onClick={handleLogOut}>Logout</a>
+                ) : (
+                  <Link to="/login">Login</Link>
+                )}
               </li>
             </ul>
           </div>
