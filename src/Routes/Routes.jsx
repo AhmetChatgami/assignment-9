@@ -9,6 +9,7 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import ToysGallery from "../Pages/ToysGallery";
 import ForgetPass from "../Pages/ForgetPass";
+import Private from "../Pages/Private";
 
 const router = createBrowserRouter([
   {
@@ -23,11 +24,11 @@ const router = createBrowserRouter([
       },
       {
        path: "/toysgallery",
-       element: <ToysGallery/>
+       element: <Private><ToysGallery/></Private>
       },
       {
         path: "/details/:id",
-        element: <ToysDetails />,
+        element: <Private> <ToysDetails /></Private>,
       },
       {
         path: "login",

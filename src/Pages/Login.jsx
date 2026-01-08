@@ -1,5 +1,5 @@
 import React, { use, useState } from "react";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../Firebase/firebase";
 import Swal from "sweetalert2";
@@ -15,13 +15,25 @@ const Login = () => {
   // Use Context 
   const {signInUser}= use(AuthContext);
 
+  const location = useLocation();
+  console.log(location)
+  const navigate = useNavigate()
+
 
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     signInUser(email, password)
-    console.log(email, password);
+    .then(result=>{
+
+      console.log(result, password);
+      e.target.reset()
+      navigate(location.state || '/')
+    })
+    .catch(error=>{
+      console.log(error)
+    })
 
     const passLength = /^.{6,}$/;
     const passCase = /^(?=.*[a-z])(?=.*[A-Z]).+$/;
