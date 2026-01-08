@@ -1,7 +1,10 @@
 # Toy Topia 
 
 ## 🔗 Live Site
+https://benevolent-cuchufli-9836be.netlify.app/
 
+## Git Hub link
+https://github.com/AhmetChatgami/assignment-9.git
 
 ## 📌 Project Description
 Toy Topia is a toy marketplace built with React and Firebase.
