@@ -1,34 +1,70 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../Firebase/firebase";
+import Swal from "sweetalert2";
+import { toast, ToastContainer } from "react-toastify";
 
 const Login = () => {
-  const handleLogin = (e)=>{
-    e.preventDefault()
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
+  const handleLogin = (e) => {
+    e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(email, password);
 
+    const passLength = /^.{6,}$/;
+    const passCase = /^(?=.*[a-z])(?=.*[A-Z]).+$/;
+    if (!passLength.test(password)) {
+      console.log("Password dismatch");
+      setError(toast.error("Password must be 6 character"));
+      return;
+    } else if (!passCase.test(password)) {
+      console.log("Lower & Upper Case needed");
+      setError(toast.error("One Upper Case & Lower Case needed."));
+      return;
+    }
+    setError("");
+    setSuccess(false);
     signInWithEmailAndPassword(auth, email, password)
-  }
+      .then((result) => {
+        console.log(result.user);
+        setSuccess(true);
+        Swal.fire({
+          title: "Welcome!",
+          text: "Logged in successfully!",
+          icon: "success",
+        });
+      })
+      .catch((error) => {
+        console.log(error.message);
+        setError(toast.error("Check Email or Password"));
+      });
+  };
   return (
     <div>
       <div className="hero bg-base-200 min-h-screen">
         <div className="hero-content flex-col ">
           <div className="text-center p-8">
+            <ToastContainer position="top-center" autoClose={3000} />
             <h1 className="text-5xl font-bold">Login Here!</h1>
-           
           </div>
           <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
             <div className="card-body">
               <form onSubmit={handleLogin}>
                 <fieldset className="fieldset">
                   <label className="label">Email</label>
-                  <input type="email" name="email" className="input" placeholder="Email" />
+                  <input
+                    type="email"
+                    name="email"
+                    className="input"
+                    placeholder="Email"
+                  />
                   <label className="label">Password</label>
                   <input
-                    type="password" name="password"
+                    type="password"
+                    name="password"
                     className="input"
                     placeholder="Password"
                   />
@@ -37,7 +73,12 @@ const Login = () => {
                   </div>
                   <button className="btn btn-neutral mt-4">Login</button>
                   <div>
-                    <p>Dont Have Account? <Link to="/registration" className="text-cyan-600">Regitster here.</Link></p>
+                    <p>
+                      Dont Have Account?{" "}
+                      <Link to="/registration" className="text-cyan-600">
+                        Regitster here.
+                      </Link>
+                    </p>
                   </div>
                 </fieldset>
               </form>
