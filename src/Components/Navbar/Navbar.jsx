@@ -1,7 +1,11 @@
-import React from "react";
+import React, { use } from "react";
 import { Link } from "react-router";
 import Logo from "../../assets/logo.png"
+import { AuthContext } from "../../AuthContext/AuthContext";
 const Navbar = () => {
+
+  const authInfo= use(AuthContext)
+  console.log('navbar is:', authInfo)
   return (
     <div className="navbar bg-base-100 shadow-sm px-4">
       <div className="navbar-start">

@@ -4,40 +4,41 @@ import {
   signInWithPopup,
   updateProfile,
 } from "firebase/auth";
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 import { Link } from "react-router";
 import { auth } from "../Firebase/firebase";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Swal from "sweetalert2";
 import { FaEyeSlash, FaRegEye } from "react-icons/fa";
+import { AuthContext } from "../AuthContext/AuthContext";
 
 const Register = () => {
   const [success, setSuccess] = useState(false);
+  const [user, setUser] = useState(null);
   const [error, setError] = useState("");
   const [showPass, setShowPass] = useState(false);
-  
+
   // Google Sign Up
   const provider = new GoogleAuthProvider();
-    const handleGoogleRegister = () => {
-      signInWithPopup(auth, provider)
-        .then((result) => {
-          console.log("new user:", result.user);
-          setSuccess(true);
+  const handleGoogleRegister = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        setSuccess(true);
+        setUser(result.user);
 
-          Swal.fire({
-            title: "Welcome!",
-            text: "Acount created successfully!",
-            icon: "success",
-          });
-        
-        })
-        .catch((error) => {
-          console.log(error);
-          setError(toast.error("Email Already Registered!"));
+        Swal.fire({
+          title: "Welcome!",
+          text: "Acount created successfully!",
+          icon: "success",
         });
-    };
-
+      })
+      .catch((error) => {
+        console.log(error);
+        setError(toast.error("Email Already Registered!"));
+      });
+  };
+const {createUser}= use(AuthContext)
   const handleRegister = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -45,6 +46,7 @@ const Register = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log("registration done", email, name, password);
+    createUser(email, password)
 
     const passLength = /^.{6,}$/;
     const passCase = /^(?=.*[a-z])(?=.*[A-Z]).+$/;
@@ -58,7 +60,6 @@ const Register = () => {
       return;
     }
 
-   
     setError("");
     setSuccess(false);
     createUserWithEmailAndPassword(auth, email, password)
@@ -90,6 +91,7 @@ const Register = () => {
     event.preventDefault();
     setShowPass(!showPass);
   };
+
   return (
     <div>
       <h1 className="text-3xl text-center font-medium">
@@ -120,7 +122,6 @@ const Register = () => {
                     name="photo"
                     placeholder="Put your photo URL"
                   />
-
                   <label className="label">Email</label>
                   <input
                     type="email"
@@ -155,10 +156,18 @@ const Register = () => {
                   </div>
                   <button className="btn bg-gradient-to-r from-amber-400 to-amber-600 font-medium hover:text-white mt-4">
                     Register
-                  </button> <p className="text-center text-xl">Or</p>
-                  <button type="button" onClick={ handleGoogleRegister} className="btn bg-gradient-to-r from-amber-400 to-amber-600 font-medium hover:text-white mt-4">
+                  </button>{" "}
+                  <p className="text-center text-xl">Or</p>
+                  <button
+                    type="button"
+                    onClick={handleGoogleRegister}
+                    className="btn bg-gradient-to-r from-amber-400 to-amber-600 font-medium hover:text-white mt-4"
+                  >
                     Signup With Google
                   </button>
+                  <div>
+                    <h3>{user?.displayName}</h3>
+                  </div>
                 </fieldset>
               </form>
             </div>
