@@ -27,7 +27,7 @@ const Login = () => {
                   </div>
                   <button className="btn btn-neutral mt-4">Login</button>
                   <div>
-                    <p>Dont Have Account? <Link to="/registration" className="text-cyan-600">Regitster an account.</Link></p>
+                    <p>Dont Have Account? <Link to="/registration" className="text-cyan-600">Regitster here.</Link></p>
                   </div>
                 </fieldset>
               </form>

@@ -3,7 +3,7 @@ import React from "react";
 import { Link, useLoaderData } from "react-router";
 import ToysCard from "../Components/ToysCard/ToysCard";
 import useToys from "../Hooks/useToys";
-
+import hero from "../assets/ToyTopia Hero.png"
 import ToySlider from "../Components/ToySlider";
 import { SwiperSlide } from "swiper/react";
 
@@ -27,7 +27,7 @@ const Home = () => {
           </span>{" "}
           Come Together
         </h1>
-
+    <img src={hero} alt="" />
         <p className="pt-4 text-gray-500 text-xl">
           Discover a world of carefully selected toys — <br />
           from creative building blocks to exciting STEM adventures — all in one

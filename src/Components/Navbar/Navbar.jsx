@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router";
-
+import Logo from "../../assets/logo.png"
 const Navbar = () => {
   return (
     <div className="navbar bg-base-100 shadow-sm px-4">
@@ -44,7 +44,8 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Link className="text-2xl font-bold" to="/">ToyTopia</Link>
+        
+        <Link className="text-2xl font-bold flex items-center gap-4" to="/"><img className="h-12 w-13" src={Logo} alt="" /> ToyTopia</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
