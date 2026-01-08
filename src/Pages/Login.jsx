@@ -15,7 +15,7 @@ const Login = () => {
     console.log(email, password);
 
     const passLength = /^.{6,}$/;
-    const passCase = /^(?=.*[a-z])(?=.*[A-Z]).+$/;
+    const passCase = /^(?=.*[Link-z])(?=.*[A-Z]).+$/;
     if (!passLength.test(password)) {
       console.log("Password dismatch");
       setError(toast.error("Password must be 6 character"));
@@ -69,7 +69,7 @@ const Login = () => {
                     placeholder="Password"
                   />
                   <div>
-                    <a className="link link-hover">Forgot password?</a>
+                    <Link to="/forgetpass" className="link link-hover">Forgot password?</Link>
                   </div>
                   <button className="btn btn-neutral mt-4">Login</button>
                   <div>

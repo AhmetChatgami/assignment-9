@@ -8,6 +8,7 @@ import About from "../Pages/About";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import ToysGallery from "../Pages/ToysGallery";
+import ForgetPass from "../Pages/ForgetPass";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
         path: "/about",
         element: <About />,
       },
+      {
+        path: '/forgetpass',
+        element: <ForgetPass/>
+      }
     ],
   },
 ]);
